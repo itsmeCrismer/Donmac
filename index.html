@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <meta name="description"
+        content="Don Macchiatos — cozy specialty coffee shop. Menu, opening hours, gallery and contact." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* small custom styles */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800 bg-gray-50">
+
+    <!-- NAV -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <a href="#hero" class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-amber-600 flex items-center justify-center text-white font-bold">
+                        DM</div>
+                    <div>
+                        <h1 class="text-lg font-semibold">Don Macchiatos</h1>
+                        <p class="text-xs text-gray-500 -mt-1">Specialty Coffee & Bakery</p>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-6 text-sm">
+                    <a href="#menu" class="hover:text-amber-600">Menu</a>
+                    <a href="#about" class="hover:text-amber-600">About</a>
+                    <a href="#gallery" class="hover:text-amber-600">Gallery</a>
+                    <a href="#contact" class="hover:text-amber-600">Contact</a>
+                    <a href="#order"
+                        class="bg-amber-600 text-white px-4 py-2 rounded-md shadow-sm hover:opacity-95">Order Online</a>
+                </nav>
+
+                <div class="md:hidden">
+                    <button id="mobileBtn" class="p-2 rounded-md focus:outline-none" aria-label="Open menu">
+                        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden border-t">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="#menu" class="py-2">Menu</a>
+                <a href="#about" class="py-2">About</a>
+                <a href="#gallery" class="py-2">Gallery</a>
+                <a href="#contact" class="py-2">Contact</a>
+                <a href="#order" class="py-2 bg-amber-600 text-white text-center rounded-md">Order Online</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero-bg min-h-[64vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-6 py-24">
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-3xl">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">Welcome to Don Macchiatos</h2>
+                <p class="mt-4 text-white/90 text-lg">Hand-brewed specialty coffee, freshly baked pastries, and a cozy
+                    corner for every conversation.</p>
+
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                    <a href="#menu"
+                        class="inline-flex items-center gap-2 bg-white text-amber-600 px-5 py-3 rounded-md font-medium shadow">See
+                        Menu</a>
+                    <a href="#about"
+                        class="inline-flex items-center gap-2 border border-white/30 text-white px-5 py-3 rounded-md font-medium">Our
+                        Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
+                <div class="w-14 h-14 rounded-lg bg-amber-100 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 002-2v-5H3v5a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold">House Roasts</h3>
+                    <p class="text-sm text-gray-500">Single-origin beans roasted weekly. Bright, balanced, and brewed to
+                        order.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
+                <div class="w-14 h-14 rounded-lg bg-amber-100 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8c-1.657 0-3 1.567-3 3.5S10.343 15 12 15s3-1.567 3-3.5S13.657 8 12 8zM19 11a7 7 0 10-14 0c0 3.866 3.582 7 8 7h-2v2h6v-2h-2c4.418 0 8-3.134 8-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Seasonal Drinks</h3>
+                    <p class="text-sm text-gray-500">Rotating menu inspired by local flavors — try the matcha-lumina for
+                        autumn.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
+                <div class="w-14 h-14 rounded-lg bg-amber-100 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M12 3v18" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Baked Fresh</h3>
+                    <p class="text-sm text-gray-500">Sourdough, croissants and daily pastries made in-house each
+                        morning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="max-w-7xl mx-auto px-6 py-12">
+        <div class="flex items-center justify-between">
+            <div>
+                <h2 class="text-2xl font-bold">Menu Highlights</h2>
+                <p class="text-gray-500 mt-1">Carefully crafted drinks and treats — small batch, big flavor.</p>
+            </div>
+            <div class="text-sm text-gray-500">Open daily • 7:00 AM — 8:00 PM</div>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+            <!-- Card -->
+            <div class="bg-white rounded-xl p-6 shadow">
+                <h3 class="font-semibold text-lg">Espresso</h3>
+                <p class="text-gray-500 mt-1">Double shot, crema-forward.</p>
+                <ul class="mt-4 space-y-2 text-sm">
+                    <li class="flex justify-between"><span>Single Espresso</span><span>₱80</span></li>
+                    <li class="flex justify-between"><span>Double Espresso</span><span>₱120</span></li>
+                    <li class="flex justify-between"><span>Americano</span><span>₱110</span></li>
+                    <li class="flex justify-between"><span>Latte</span><span>₱150</span></li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow">
+                <h3 class="font-semibold text-lg">Brewed</h3>
+                <p class="text-gray-500 mt-1">V60 pour-over, Chemex, and batch brew available.</p>
+                <ul class="mt-4 space-y-2 text-sm">
+                    <li class="flex justify-between"><span>V60</span><span>₱160</span></li>
+                    <li class="flex justify-between"><span>Chemex</span><span>₱220</span></li>
+                    <li class="flex justify-between"><span>Cold Brew</span><span>₱180</span></li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow">
+                <h3 class="font-semibold text-lg">Bakery</h3>
+                <p class="text-gray-500 mt-1">Daily selection — ask the barista for today's specials.</p>
+                <ul class="mt-4 space-y-2 text-sm">
+                    <li class="flex justify-between"><span>Almond Croissant</span><span>₱140</span></li>
+                    <li class="flex justify-between"><span>Sourdough Slice</span><span>₱90</span></li>
+                    <li class="flex justify-between"><span>Blueberry Muffin</span><span>₱95</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-2xl font-bold">Our Story</h2>
+                <p class="mt-4 text-gray-600">Don Macchiatos began with a single bag of carefully sourced beans and a
+                    love for simple, honest coffee. We partner with smallholder farms, roast in small batches, and train
+                    our baristas to extract the best cup possible.</p>
+
+                <ul class="mt-6 space-y-3 text-sm text-gray-500">
+                    <li>• Ethically sourced beans</li>
+                    <li>• In-house roasting & craft brewing</li>
+                    <li>• Community-first events & workshops</li>
+                </ul>
+
+                <a href="#contact" class="inline-block mt-6 bg-amber-600 text-white px-4 py-2 rounded-md">Book a
+                    Cupping</a>
+            </div>
+
+            <div class="bg-white rounded-xl shadow overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="barista" class="w-full h-80 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold">Gallery</h2>
+        <p class="text-gray-500 mt-1">Moments from the shop — cups, people, and pastries.</p>
+
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img class="w-full h-38 object-cover rounded-lg shadow-xl"
+                src="donnnnnnn.jpg"
+                alt="coffee cup">
+            <img class="w-full h-38 object-cover rounded-lg shadow-xl"
+                src="donnnnnn.jpg"
+                alt="latte art">
+            <img class="w-full h-38 object-cover rounded-lg shadow-xl"
+                src="donnnnnnnnn.jpg"
+                alt="pastries">
+            <img class="w-full h-38 object-cover rounded-lg shadow-xl"
+                src="donnnnnnnnnnn.jpg"
+                alt="inside shop">
+        </div>
+    </section>
+
+    <!-- ORDER / CTA -->
+    <section id="order" class="bg-amber-600 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <h3 class="text-xl font-bold">Order for pickup or delivery</h3>
+                <p class="text-white/90 mt-1">Get your favorite cup ready — pick-up or straight to your door.</p>
+            </div>
+            <div class="flex gap-3">
+                <a href="#" class="bg-white text-amber-600 px-4 py-2 rounded-md font-medium">Pick-up</a>
+                <a href="#" class="bg-white/10 border border-white/30 px-4 py-2 rounded-md">Delivery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-2xl font-bold">Contact & Location</h2>
+                <p class="text-gray-500 mt-2">Visit us or send a message. We host events and private tastings — get in
+                    touch.</p>
+
+                <div class="mt-6 space-y-3 text-sm text-gray-600">
+                    <div><strong>Address:</strong>📍6225 National Highway,
+                        Brgy. San Francisco, Panabo
+                        City - In front of
+                        Maryknoll and Beside 7/11</div>
+                    <div><strong>Hours:</strong> Daily 10:00 AM — 2:00 AM</div>
+                    <div><strong>Phone:</strong> +639641418696</div>
+                    <div><strong>Email:</strong> donmacchiatos@gmail.com</div>
+                </div>
+
+                <div class="mt-6">
+                    <!-- simple embedded map placeholder -->
+                    <div class="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400">Map
+                        placeholder</div>
+                </div>
+            </div>
+
+            <form class="bg-white rounded-xl p-6 shadow">
+                <h3 class="font-semibold">Send us a message</h3>
+                <p class="text-sm text-gray-500 mt-1">Questions about catering, events, or wholesale?</p>
+
+                <div class="mt-4 grid gap-3">
+                    <input class="border rounded-md px-3 py-2 text-sm" type="text" placeholder="Your name" required>
+                    <input class="border rounded-md px-3 py-2 text-sm" type="email" placeholder="Email" required>
+                    <input class="border rounded-md px-3 py-2 text-sm" type="text" placeholder="Subject">
+                    <textarea class="border rounded-md px-3 py-2 text-sm h-28" placeholder="Message"></textarea>
+                    <div class="flex items-center justify-between">
+                        <button type="submit" class="bg-amber-600 text-white px-4 py-2 rounded-md">Send Message</button>
+                        <div class="text-xs text-gray-400">We'll reply within 48 hours.</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-sm text-gray-600">© 2025 Crismer — All rights reserved.</div>
+            <div class="flex gap-4 text-sm">
+                <a href="#" class="hover:text-amber-600">Privacy</a>
+                <a href="#" class="hover:text-amber-600">Terms</a>
+                <a href="#" class="hover:text-amber-600">Careers</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobileBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const menuIcon = document.getElementById('menuIcon');
+            if (!mobileMenu.classList.contains('hidden')) {
+                menuIcon.innerHTML = '\n            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />\n          ';
+            } else {
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+            }
+        });
+
+        // simple form prevent submit for demo
+        document.querySelectorAll('form').forEach(f => f.addEventListener('submit', (e) => { e.preventDefault(); alert('Thanks! This demo form does not send messages.'); }));
+    </script>
+</body>
+
+</html>
